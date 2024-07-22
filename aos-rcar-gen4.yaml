@@ -86,8 +86,8 @@ common_data:
       rev: "4ced34ce59279e607fb32ea77caa67f591ae5080"
 
     - type: git
-      url: "https://github.com/aoscloud/meta-aos-rcar-gen4"
-      rev: "CES2024"
+      url: "https://github.com/iusyk/meta-aos-rcar-gen4"
+      rev: "update-moving-from-aosbox"
 
   # Common configuration options for all yocto-based domains
   common_conf: &COMMON_CONF
@@ -440,12 +440,13 @@ parameters:
   VIS_DATA_PROVIDER:
     desc: "Specifies plugin for VIS automotive data"
     renesassimulator:
-      default: true
+      default: false
       overrides:
         variables:
           AOS_VIS_DATA_PROVIDER: "renesassimulatoradapter"
 
     telemetryemulator:
+      default: true
       overrides:
         variables:
           AOS_VIS_DATA_PROVIDER: "telemetryemulatoradapter"
